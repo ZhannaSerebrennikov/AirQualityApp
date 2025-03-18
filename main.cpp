@@ -5,6 +5,7 @@
 #include "ConnectionManager.h"
 #include "XAQISensor_Adapter.h"
 #include "JAQISensor_Adapter.h"
+#include "RobotAirPurifierAQISensor_Adapter.h"
 
 int main()
 {
@@ -34,10 +35,9 @@ int main()
         sensors.push_back(move(sensor_children_room));
     }
 
-    std::unique_ptr<JAQISensor_Adapter> sensor_office = std::make_unique<JAQISensor_Adapter>();
+    std::unique_ptr<RobotAirPurifierAQISensor_Adapter> sensor_office = std::make_unique<RobotAirPurifierAQISensor_Adapter>();
     if(connection_manager.Connect(*sensor_office))
     {
-        sensor_office->SetRoomName("Office");
         sensors.push_back(move(sensor_office));
     }
 

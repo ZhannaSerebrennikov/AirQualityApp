@@ -2,7 +2,7 @@
 #include "JAQISensor.h"
 #include "AQIJSONParser.h"
 
-class JAQISensor_Adapter : public AQISensor{
+class JAQISensor_Adapter : public StationaryAQISensor{
     private:
     JAQISensor sensor_;
     AQIJSONParser parser_;

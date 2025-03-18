@@ -1,7 +1,7 @@
 #include "AQISensor.h"
 #include "XAQISensor.h"
 
-class XAQISensor_Adapter : public AQISensor{
+class XAQISensor_Adapter : public StationaryAQISensor{
     private:
     XAQISensor sensor_;
 
