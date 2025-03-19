@@ -7,8 +7,20 @@ struct AQIParameter{
     int value;
     std::string unit;
 };
+class AQISensorInformation{
+    public:
+    virtual ~AQISensorInformation() = default;
+    virtual std::string RoomName() const = 0;
+    virtual std::vector<AQIParameter> GetData() const = 0;
+};
 
-class AQISensor{
+class AQISensorConnection{
+    public:
+    virtual ~AQISensorConnection() = default;
+    virtual bool Connect(std::string connection_data) = 0;
+};
+
+class AQISensor : public AQISensorInformation, public AQISensorConnection{
     public:
     virtual ~AQISensor() = default;
     virtual bool Connect(std::string connection_data) = 0;

@@ -40,7 +40,7 @@ void AQISensorDisplay::renderAdditionalParameters(std::string paramName, int val
 }
 
 
-void AQISensorDisplay::RenderParameters(const AQISensor& sensor_, bool showDetails_) const
+void AQISensorDisplay::RenderParameters(const AQISensorInformation& sensor_, bool showDetails_) const
 {
     std::cout<<"\n";
     std::vector<AQIParameter> sensor_data = sensor_.GetData();

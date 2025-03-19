@@ -7,5 +7,5 @@ class ConnectionManager{
     QRScanner qr_scanner;
 
     public:
-    bool Connect(AQISensor&_sensor);
+    bool Connect(AQISensorConnection&_sensor);
 };
