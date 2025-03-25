@@ -3,7 +3,7 @@
 #include <string>
 #include  <chrono>
 
-class QRScanner{
+class QRScanner : public ConnectionDataProvider{
     public:
     QRScanner();
     std::string GetData()const;
